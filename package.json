@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "eslint": "^9.10.0",
+    "stylelint": "^16.9.0"
+  }
+}
