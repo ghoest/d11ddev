@@ -1,19 +1,13 @@
 {
     "name": "drupal/recommended-project",
     "description": "Project template for Drupal projects with a relocated document root",
-    "type": "project",
     "license": "GPL-2.0-or-later",
+    "type": "project",
     "homepage": "https://www.drupal.org/project/drupal",
     "support": {
-        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
-        "chat": "https://www.drupal.org/node/314178"
+        "chat": "https://www.drupal.org/node/314178",
+        "docs": "https://www.drupal.org/docs/user_guide/en/index.html"
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        }
-    ],
     "require": {
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7",
@@ -26,25 +20,65 @@
         "drupal/paragraphs": "^1.18",
         "drush/drush": "^13.1"
     },
+    "require-dev": {
+        "drupal/coder": "^8.3",
+        "drupal/core-dev": "^11.0",
+        "drupal/devel": "^5.3",
+        "drupal/webprofiler": "^11.0",
+        "ergebnis/composer-normalize": "^2.43",
+        "palantirnet/drupal-rector": "^0.20.3",
+        "php-parallel-lint/php-parallel-lint": "^1.4",
+        "phpro/grumphp": "^2.7",
+        "rector/rector": "^1.2",
+        "rector/swiss-knife": "^0.2.33"
+    },
     "conflict": {
         "drupal/drupal": "*"
     },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
     "minimum-stability": "stable",
     "prefer-stable": true,
     "config": {
         "allow-plugins": {
             "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
-            "phpstan/extension-installer": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "ergebnis/composer-normalize": true,
             "php-http/discovery": true,
             "phpro/grumphp": true,
-            "cweagans/composer-patches": true
+            "phpstan/extension-installer": true
         },
         "sort-packages": true
     },
     "extra": {
+        "drupal-core-project-message": {
+            "include-keys": [
+                "homepage",
+                "support"
+            ],
+            "post-create-project-cmd-message": [
+                "<bg=blue;fg=white>                                                         </>",
+                "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
+                "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
+                "<bg=blue;fg=white>                                                         </>",
+                "",
+                "<bg=yellow;fg=black>Next steps</>:",
+                "  * Install the site: https://www.drupal.org/docs/installing-drupal",
+                "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
+                "  * Get support: https://www.drupal.org/support",
+                "  * Get involved with the Drupal community:",
+                "      https://www.drupal.org/getting-involved",
+                "  * Remove the plugin that prints this message:",
+                "      composer remove drupal/core-project-message"
+            ]
+        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "docroot/"
@@ -78,37 +112,6 @@
             "docroot/themes/custom/{$name}": [
                 "type:drupal-custom-theme"
             ]
-        },
-        "drupal-core-project-message": {
-            "include-keys": [
-                "homepage",
-                "support"
-            ],
-            "post-create-project-cmd-message": [
-                "<bg=blue;fg=white>                                                         </>",
-                "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
-                "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
-                "<bg=blue;fg=white>                                                         </>",
-                "",
-                "<bg=yellow;fg=black>Next steps</>:",
-                "  * Install the site: https://www.drupal.org/docs/installing-drupal",
-                "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
-                "  * Get support: https://www.drupal.org/support",
-                "  * Get involved with the Drupal community:",
-                "      https://www.drupal.org/getting-involved",
-                "  * Remove the plugin that prints this message:",
-                "      composer remove drupal/core-project-message"
-            ]
         }
-    },
-    "require-dev": {
-        "drupal/coder": "^8.3",
-        "drupal/core-dev": "^11.0",
-        "drupal/devel": "^5.3",
-        "drupal/webprofiler": "^11.0",
-        "palantirnet/drupal-rector": "^0.20.3",
-        "phpro/grumphp": "^2.7",
-        "rector/rector": "^1.2",
-        "rector/swiss-knife": "^0.2.33"
     }
 }

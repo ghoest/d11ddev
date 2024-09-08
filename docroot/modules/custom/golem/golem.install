@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * @file
+ * Install, update, and uninstall functions for the golem module.
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function golem_requirements($phase) {
+  if ($phase == 'install') {
+    // The install phase is a good place for double checking if requirements
+    // have been installed. This was shamelessly copied from the upgrade_status
+    // module.
+    if (!class_exists('DrupalFinder/DrupalFinder')) {
+      return [
+        'golem' => [
+          'description' => t('External dependencies missing: DrupalFinder'),
+          'severity' => REQUIREMENT_ERROR,
+        ],
+      ];
+    }
+  }
+  return [];
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function golem_uninstall() {
+  // Placeholder.
+  return [];
+}
+
+/**
+ * Update hook template.
+ */
+function golem_update_x_xx_x() {
+  // Template.
+}

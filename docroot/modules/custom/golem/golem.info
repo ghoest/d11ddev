@@ -1,0 +1,8 @@
+name: Golem Module
+description: A module to run linters and possibly make it easier to view the output (GO Lint Every Module).
+package: Custom
+
+type: module
+core_version_requirement: ^10 || ^11
+
+php: 8.3

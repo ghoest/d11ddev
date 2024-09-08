@@ -1,0 +1,5 @@
+services:
+  logger.channel.golem:
+    parent: logger.channel_base
+    arguments: ['golem']
+

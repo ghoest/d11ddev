@@ -1,2 +1,117 @@
 grumphp:
-    tasks: { composer: null, git_blacklist: null, git_commit_message: null, eslint: null, jsonlint: null, make: null, phpcs: null, phplint: null, phpstan: null, phpunit: null, phpversion: null, rector: null, stylelint: null, xmllint: null, yamllint: null }
+  tasks:
+    composer: #https://github.com/phpro/grumphp/blob/v2.x/doc/tasks/composer.md
+      file: ./composer.json
+      no_check_all: false
+      no_check_lock: false
+      no_check_publish: false
+      no_local_repository: false
+      with_dependencies: false
+      strict: false
+    composer_normalize: #https://github.com/phpro/grumphp/blob/v2.x/doc/tasks/composer_normalize.md
+      indent_size: ~
+      indent_style: ~
+      no_check_lock: false
+      no_update_lock: true
+      verbose: false
+    git_blacklist: #https://github.com/phpro/grumphp/blob/v2.x/doc/tasks/git_blacklist.md
+      keywords: []
+      whitelist_patterns: []
+      triggered_by: ['php']
+      regexp_type: G
+      match_word: false
+      ignore_patterns: []
+    git_branch_name: #https://github.com/phpro/grumphp/blob/v2.x/doc/tasks/git_branch_name.md
+      whitelist: 
+        - "*"
+      blacklist:
+        - "master"
+      additional_modifiers: ''
+      allow_detached_head: true
+    git_commit_message: ~ #https://github.com/phpro/grumphp/blob/v2.x/doc/tasks/git_commit_message.md
+    eslint: #https://github.com/phpro/grumphp/blob/v2.x/doc/tasks/eslint.md
+      bin: node_modules/.bin/eslint
+      triggered_by: [js, jsx, ts, tsx, vue]
+      whitelist_patterns: []
+      ignore_path: .eslintignore
+      debug: false
+      format: ~
+      max_warnings: ~
+      no_eslintrc: false
+      quiet: false
+    jsonlint: #https://github.com/phpro/grumphp/blob/v2.x/doc/tasks/jsonlint.md
+      ignore_patterns: []
+      detect_key_conflicts: false
+    #make: ~ #https://github.com/phpro/grumphp/blob/v2.x/doc/tasks/make.md
+    phpcs: #https://github.com/phpro/grumphp/blob/v2.x/doc/tasks/phpcs.md
+      standard: []
+      severity: ~
+      error_severity: ~
+      warning_severity: ~
+      tab_width: ~
+      report: full
+      report_width: ~
+      whitelist_patterns: []
+      encoding: ~
+      ignore_patterns: [rector.php]
+      sniffs: []
+      triggered_by: [php]
+      exclude: []
+      show_sniffs_error_path: true
+    phplint: #https://github.com/phpro/grumphp/blob/v2.x/doc/tasks/phplint.md
+      exclude: []
+      jobs: ~
+      short_open_tag: false
+      ignore_patterns: []
+      triggered_by: ['php']
+    phpstan: #https://github.com/phpro/grumphp/blob/v2.x/doc/tasks/phpstan.md
+      autoload_file: ~
+      configuration: ~
+      level: null
+      force_patterns: []
+      ignore_patterns: []
+      triggered_by: ['php']
+      memory_limit: "-1"
+    #phpunit: ~ #https://github.com/phpro/grumphp/blob/v2.x/doc/tasks/phpunit.md
+    #phpversion: ~ #https://github.com/phpro/grumphp/blob/v2.x/doc/tasks/phpversion.md
+    rector: #https://github.com/phpro/grumphp/blob/v2.x/doc/tasks/rector.md
+      config: docroot/modules/custom/golem/rector.php
+      triggered_by: ['php']
+      clear_cache: true
+      no_diffs: false
+    stylelint: #https://github.com/phpro/grumphp/blob/v2.x/doc/tasks/stylelint.md
+      bin: node_modules/.bin/stylelint
+      triggered_by: [css, scss, sass, less, sss]
+      whitelist_patterns:
+        - /^resources\/css\/(.*)/
+      config: ~
+      config_basedir: ~
+      ignore_path: ~
+      ignore_pattern: ~
+      syntax: ~
+      custom_syntax: ~
+      ignore_disables: ~
+      disable_default_ignores: ~
+      cache: ~
+      cache_location: ~
+      formatter: ~
+      custom_formatter: ~
+      quiet: ~
+      color: ~
+      report_needless_disables: ~
+      report_invalid_scope_disables: ~
+      report_descriptionless_disables: ~
+      max_warnings: ~
+      output_file: ~
+    xmllint: #https://github.com/phpro/grumphp/blob/v2.x/doc/tasks/xmllint.md
+      ignore_patterns: []
+      load_from_net: false
+      x_include: false
+      scheme_validation: false
+      triggered_by: ['xml']
+    yamllint: #https://github.com/phpro/grumphp/blob/v2.x/doc/tasks/yamllint.md
+      whitelist_patterns: []
+      ignore_patterns: []
+      object_support: false
+      exception_on_invalid_type: false
+      parse_constant: false

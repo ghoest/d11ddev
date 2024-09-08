@@ -1,0 +1,27 @@
+{
+    "name": "drupal/golem",
+    "description": "A module to run linters (GO Lint Every Module? this could use a better backronym and/or name)",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "require-dev": {
+        "metadrop/grumphp-drupal-check": "^0.4.0",
+        "mglaman/drupal-check": "^1.5",
+        "mglaman/phpstan-drupal": "^1.2",
+        "palantirnet/drupal-rector": "^0.20.3",
+        "phpro/grumphp": "^2.7",
+        "phpstan/phpstan": "^1.12",
+        "seld/jsonlint": "^1.11",
+        "squizlabs/php_codesniffer": "^3.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Drupal\\Golem\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jason Gose",
+            "email": "jason.gose@civicactions.com"
+        }
+    ]
+}
