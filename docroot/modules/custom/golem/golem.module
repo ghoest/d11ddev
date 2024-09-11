@@ -1,0 +1,17 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function golem_help($route_name, RouteMatchInterface $route_match) {
+  $output = NULL;
+  if ($route_name === 'help.page.golem') {
+    $output = '';
+    $output .= '<h2>' . t('Golem') . '</h2>';
+    $output .= '<h3>' . t('Instructions') . '</h3>';
+    $output .= '<p>' . t('TODO') . '</p>';
+  }
+  return $output;
+}

@@ -8,6 +8,11 @@ return RectorConfig::configure()
     ->withPaths([
         __DIR__ . '/docroot/modules/custom/golem',
     ])
-    // uncomment to reach your current PHP version
-    ->withPhpSets()
+    ->withPhpSets(
+        php83: true,
+    )
+    ->withPreparedSets(
+        deadCode: true,
+        codeQuality: true
+    )
     ->withTypeCoverageLevel(0);

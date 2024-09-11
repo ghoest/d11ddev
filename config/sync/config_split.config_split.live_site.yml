@@ -1,0 +1,17 @@
+uuid: 4fbe1b5b-5746-492a-8d27-7034a468766d
+langcode: en
+status: false
+dependencies: {  }
+id: live_site
+label: 'Live Site'
+description: 'Configuration for the live site'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/live
+module: {  }
+theme: {  }
+complete_list:
+  - core.extension
+partial_list: {  }

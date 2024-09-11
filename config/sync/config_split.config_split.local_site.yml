@@ -1,0 +1,17 @@
+uuid: ac5b3aac-2d5c-4ea6-9369-0a00c34cbb26
+langcode: en
+status: true
+dependencies: {  }
+id: local_site
+label: 'Local Site'
+description: 'This configuration should only be used when working with a local instance; like you would when are working with ddev.'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/local
+module: {  }
+theme: {  }
+complete_list:
+  - core.extension
+partial_list: {  }
