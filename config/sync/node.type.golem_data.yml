@@ -1,0 +1,18 @@
+uuid: 15f23be5-f6d2-49dd-8886-04a779c90fe9
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - devel
+    parent: 'devel:'
+name: 'Golem Data'
+type: golem_data
+description: 'Used to hold golem data.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

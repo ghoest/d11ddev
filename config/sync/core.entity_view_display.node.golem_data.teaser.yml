@@ -1,0 +1,32 @@
+uuid: 40945e84-4f56-40e8-a6bb-855c34d9f851
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.golem_data.body
+    - field.field.node.golem_data.field_linter_output
+    - node.type.golem_data
+  module:
+    - text
+    - user
+id: node.golem_data.teaser
+targetEntityType: node
+bundle: golem_data
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_linter_output: true

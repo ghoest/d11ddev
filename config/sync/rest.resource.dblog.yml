@@ -1,0 +1,19 @@
+uuid: b07ae1c9-ce93-4f1e-896a-07a729af3a8a
+langcode: en
+status: true
+dependencies:
+  module:
+    - dblog
+    - serialization
+    - user
+id: dblog
+plugin_id: dblog
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+    - xml
+  authentication:
+    - cookie

@@ -10,13 +10,15 @@
     },
     "require": {
         "composer/installers": "^2.0",
-        "cweagans/composer-patches": "^1.0",
+        "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.5",
+        "drupal/codit_batch_operations": "^1.0",
         "drupal/config_split": "^2.0",
         "drupal/core-composer-scaffold": "^11.0",
         "drupal/core-project-message": "^11.0",
         "drupal/core-recommended": "^11.0",
         "drupal/ctools": "^4.1",
+        "drupal/diff": "^1.8",
         "drupal/editoria11y": "^2.1",
         "drupal/memcache": "^2.7",
         "drupal/paragraphs": "^1.18",
@@ -26,10 +28,12 @@
         "drupal/seckit": "^2.0",
         "drupal/simple_sitemap": "^4.2",
         "drupal/sitemap": "^2.0",
+        "drupal/storybook": "^1.0",
+        "drupal/symfony_mailer": "^1.5",
+        "drupal/tmgmt": "^1.16",
         "drupal/token": "^1.15",
         "drupal/twig_tweak": "^3.4",
-        "drush/drush": "^13.1",
-        "twig/twig": "3.14 as 3.10.3"
+        "drush/drush": "^13.1"
     },
     "require-dev": {
         "drupal/coder": "^8.3",
@@ -66,7 +70,8 @@
             "ergebnis/composer-normalize": true,
             "php-http/discovery": true,
             "phpro/grumphp": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "tbachert/spi": true
         },
         "sort-packages": true
     },

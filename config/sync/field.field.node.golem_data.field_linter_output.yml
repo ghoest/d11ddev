@@ -1,0 +1,19 @@
+uuid: 061b9c99-f17c-475c-b777-6de6d6cd91d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_linter_output
+    - node.type.golem_data
+id: node.golem_data.field_linter_output
+field_name: field_linter_output
+entity_type: node
+bundle: golem_data
+label: 'Linter Output'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
